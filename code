@@ -217,10 +217,9 @@ function startRace() {
     let progress = goats.map(() => 0);
 
     // Luck affects average speed, with random speed variation.
-    let speeds = goats.map(g =>
-        (0.7 + Math.random()*0.6) * g.luck
-    );
-
+  let speeds = goats.map(g =>
+    (0.15 + Math.random()*0.3) * g.luck
+);
     const interval = setInterval(() => {
         goats.forEach((goat,i) => {
             progress[i] += speeds[i] * (0.7 + Math.random()*0.6);
